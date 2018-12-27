@@ -10,9 +10,27 @@ module.exports = {
   },
   themeConfig: {
     nav:[ // 导航栏配置
-      {text: '算法', link: '/algorithm/'}
+      {text: '算法', link: '/algorithm/'},
+      {text: '前端', link: '/fe/'},
+      {text: '生活随笔', link: '/eassy/'}
     ],
-    sidebar: 'auto', // 侧边栏配置
+    sidebar: {  // 侧边栏配置
+      '/algorithm/': [
+        '/algorithm/',
+        {
+          title: '排序算法',
+          children: [
+            // 以docs为根目录来查找文件 
+            // 上面地址查找的是：docs>accumulate>JS>test.md 文件
+            // 自动加.md 每个子选项的标题 是该md文件中的第一个h1/h2/h3标题
+            '/algorithm/sort/bubble.md',
+          ]
+        }
+      ],
+      '/fe/': [
+        '/fe/'
+      ]
+    },
     sidebarDepth: 2, // 侧边栏显示2级
   }
 };
