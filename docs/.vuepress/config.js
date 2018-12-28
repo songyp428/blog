@@ -24,11 +24,21 @@ module.exports = {
             // 上面地址查找的是：docs>accumulate>JS>test.md 文件
             // 自动加.md 每个子选项的标题 是该md文件中的第一个h1/h2/h3标题
             '/algorithm/sort/bubble.md',
+            '/algorithm/sort/cocktail.md'
           ]
         }
       ],
       '/fe/': [
         '/fe/'
+      ],
+      '/eassy/': [
+        '/eassy/',
+        {
+          title: '工作',
+          children: [
+            '/eassy/work/resignation.md'
+          ]
+        }
       ]
     },
     sidebarDepth: 2, // 侧边栏显示2级
