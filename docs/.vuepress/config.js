@@ -29,7 +29,13 @@ module.exports = {
         }
       ],
       '/fe/': [
-        '/fe/'
+        '/fe/',
+        {
+          title: 'JS',
+          children: [
+            '/fe/js/arrayDeduplication.md'
+          ]
+        }
       ],
       '/eassy/': [
         '/eassy/',
