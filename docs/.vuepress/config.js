@@ -40,9 +40,9 @@ module.exports = {
       '/eassy/': [
         '/eassy/',
         {
-          title: '工作',
+          title: '美食',
           children: [
-            '/eassy/work/resignation.md'
+            '/eassy/work/makechickenfeet.md'
           ]
         }
       ]
