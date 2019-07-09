@@ -33,7 +33,9 @@ module.exports = {
         {
           title: 'JS',
           children: [
-            '/fe/js/arrayDeduplication.md'
+            '/fe/js/arrayDeduplication.md',
+            '/fe/js/prototype.md',
+            // '/fe/js/newOperator.md',
           ]
         }
       ],
