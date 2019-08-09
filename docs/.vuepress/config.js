@@ -21,7 +21,7 @@ module.exports = {
           title: '排序算法',
           children: [
             // 以docs为根目录来查找文件 
-            // 上面地址查找的是：docs>accumulate>JS>test.md 文件
+            // 下面地址查找的是：docs>algorithm>sort>bubble.md 文件
             // 自动加.md 每个子选项的标题 是该md文件中的第一个h1/h2/h3标题
             '/algorithm/sort/bubble.md',
             '/algorithm/sort/cocktail.md'
@@ -35,7 +35,14 @@ module.exports = {
           children: [
             '/fe/js/arrayDeduplication.md',
             '/fe/js/prototype.md',
+            '/fe/js/inheritance.md'
             // '/fe/js/newOperator.md',
+          ]
+        },
+        {
+          title: '动画',
+          children: [
+
           ]
         }
       ],
@@ -44,7 +51,13 @@ module.exports = {
         {
           title: '美食',
           children: [
-            '/eassy/work/makechickenfeet.md'
+            // '/eassy/work/makechickenfeet.md',
+          ]
+        },
+        {
+          title: '胡思乱想',
+          children: [
+            '/eassy/think/魔道祖师.md'
           ]
         }
       ]

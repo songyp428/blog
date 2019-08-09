@@ -1,5 +1,5 @@
 ### 原型和原型链
-- 什么是原型？为什么需要原型？
+- 什么是原型？
 - 原型链是什么？
 - 如何实现原型链？
 
@@ -105,8 +105,8 @@ null 是表示缺少的标识，指示变量未指向任何对象。也就是说
 有个问题，你发现了吗？构造函数从何而来？
 
 #### 构造函数的原型链
-任何函数都是由 new Function 创建。也就是说所有的构造函数的 `__proto__` 都是指向 Function.prototype。  
-Function.prototype 对象是一个函数（对象），其 [[Prototype]] 内部属性值指向内建对象 Object.prototype。Function.prototype 没有 prototype 属性。Function.prototype.__proto__  === Object.prototype。  
+- 任何函数都是由 new Function 创建。也就是说所有的构造函数的 `__proto__` 都是指向 Function.prototype。  
+- Function.prototype 对象是一个函数（对象），其 [[Prototype]] 内部属性值指向内建对象 Object.prototype。Function.prototype 没有 prototype 属性。`Function.prototype.__proto__  === Object.prototype`。  
 那么关系图可以更新为: 
 ![Aaron Swartz](https://raw.githubusercontent.com/songyp428/photo/master/ret/prototype5.png)
 
