@@ -7,10 +7,14 @@
     "build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
-  "keywords": ["前端", "生活"],
+  "keywords": [
+    "前端",
+    "生活"
+  ],
   "author": "songyanping",
   "license": "ISC",
   "dependencies": {
+    "element-ui": "^2.13.0",
     "vuepress": "^0.14.4"
   }
 }
