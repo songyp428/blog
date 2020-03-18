@@ -10,7 +10,7 @@
 
 **注意： 对象和 NaN 不去重。**
 
-```
+```js
 var a = [1, 1, 2, 3, 2, '1', true, '1', '2', 1, false, true, null, null, undefined, undefined, NaN, NaN]
 
 function getUniqueArray(arr){
@@ -43,7 +43,7 @@ console.log(getUniqueArray(a))  //[1, 2, 3, "1", true, "2", false, null, undefin
 >借助辅助数组，和 indexOf() 方法，循环一遍需要去重的数组，要执行 n 次 indexOf() 方法，如果数组很大，还是比较耗时。
 
 **注意：对象和 NaN 不去重。**
-```
+```js
 var a = [1, 1, 2, 3, 2, '1', true, '1', '2', 1, false, true, null, null, undefined, undefined, NaN, NaN]
 
 function getUniqueArray(arr) {
@@ -66,7 +66,7 @@ console.log(getUniqueArray(a)) //[1, 2, 3, "1", true, "2", false, null, undefine
 >第一次写的时候，只是用元素本身作为 object 的 key，但是这样会导致一个问题，例如 1 和 ‘1’ 就是相同的 key,所以需要用元素数据类型和元素作为 key。
 
 **特别好，除了对象外都去重了**
-```
+```js
 var a = [1,1,'1',true,'1',1,false,true,null,null,undefined,undefined,NaN,NaN]
 
 function getUniqueArray(arr) {
@@ -94,7 +94,7 @@ console.log(getUniqueArray(a))  //[1, "1", true, false, null, undefined, NaN]
 
 **注意：对象和 NaN 不去重 数字 1 也不去重。**
 
-```
+```js
 //排序循环去重
 var a = [1,1,2,3,2,'1',true,'1','2',1,1,false,true,null,null,undefined,undefined,NaN,NaN]
 function getUniqueArray(arr) {
@@ -125,11 +125,10 @@ console.log(getUniqueArray(a))
 #### 6、借助 ES6 一行代码去重
 >只针对一维数组，并且对象无法去重。
 
-```
+```js
 var a = [1,1,2,3,2,'1',true,'1','2',1,1,false,true,null,null,undefined,undefined,NaN,NaN]
 console.log([...new Set(a)])          //[1, 2, 3, "1", true, "2", false, null, undefined, NaN]
 console.log(Array.from(new Set(a)))   //[1, 2, 3, "1", true, "2", false, null, undefined, NaN]
-
 ```
 
 #### 7、数组元素为对象去重
@@ -142,7 +141,7 @@ console.log(Array.from(new Set(a)))   //[1, 2, 3, "1", true, "2", false, null, u
 
 
 >需要根据对象中唯一的 id 来作为唯一标示去重。初始值 initialValue 赋值为空数组（也就是 item 初始时为 [] )，然后判断当前处理元素的 id 是在辅助对象 hash 已有的 key ，不存在则 hash 增加这一条记录，并且把 curValue push 到 preValue 中。
-```
+```js
 var a = [{id: 1,name: 'ss'},{id: 2,name: 's'},{id: 3,name: 'sss'},{id: 1,name: 'ss'},{id: 3,name: 'sss'},{id: 4,name: 'ssss'}]
 
 var hash = {}
@@ -152,6 +151,5 @@ var newArr = a.reduceRight((preValue, curValue) => {
 }, [])
 
 console.log(newArr)  //[{id: 4, name: "ssss"},{id: 3, name: "sss"},{id: 1, name: "ss"},{id: 2, name: "s"}]
-
 ```
 

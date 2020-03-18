@@ -15,9 +15,9 @@
       >
         <img :src="file.url" alt="" />
         <span class="img-hover-container">
-          <a download="download" :href="file.url" target="_blank">
+          <!--<a download="download" :href="file.url" target="_blank">
             <span><i class="el-icon-download"></i></span>
-          </a>
+          </a>-->
           <span @click="handleRemoveFile(index)">
             <i class="el-icon-delete"></i>
           </span>

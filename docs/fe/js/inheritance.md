@@ -3,7 +3,7 @@
 
 ### 原型链继承
 对象可以通过原型链来继承原型的方法和属性。原型链继承本质：**重写原型对象，代之以一个新类型的实例**。 
-```
+```js
 function Animal(type) {
     this.name = 'animal'            // 跟子类的属性重名，只能通过 __proto__ 访问
     this.childs = ['dog']
@@ -41,7 +41,7 @@ console.log(teddy.childs)           // ["dog", "cat"]
 
 ### 借用构造函数继承
 使用**父类的构造函数**来增强子类实例，等同于复制父类的实例给子类(不使用原型)。
-```
+```js
 function Animal(type) {
     this.name = 'animal'
     this.childs = ['dog']
@@ -70,7 +70,7 @@ console.log(teddy.childs)  // ['dog']
 
 ### 组合继承
 用**原型链**来继承原型的方法和属性，用**借用构造函数**来实现实例属性的继承。
-```
+```js
 function Animal(type) {
   this.type = type
   this.list = [1,2]
@@ -106,7 +106,7 @@ teddy.list  // [1,2]
 ### 原型式继承
 该方法最初由道格拉斯·克罗克福德于2006年在一篇题为 《Prototypal Inheritance in JavaScript》(JavaScript中的原型式继承) 的文章中提出。 他的想法是借助原型可以基于已有的对象创建新对象， 同时还不必因此创建自定义类型。
 
-```
+```js
 function createObject(obj){
   function F(){}
   F.prototype = obj
@@ -139,7 +139,7 @@ console.log(p2.friends) // ["xiaofeng", "xiaomin"]
 用法：Object.create(proto[, propertiesObject])
   - 新创建对象的原型对象。
   - 可选。如果没有指定为 undefined，则是要添加到新创建对象的可枚举属性（即其自身定义的属性，而不是其原型链上的枚举属性）对象的属性描述符以及相应的属性名称。这些属性对应Object.defineProperties()的第二个参数。  
-```
+```js
 // 自定义对象作为原型
 var person = {
   name: 'user name',
@@ -150,7 +150,7 @@ var p1 = Object.create(person)
 ### 寄生式继承
 寄生式继承是与原型式继承紧密相关的一种思路， 同样是克罗克福德推而广之。  
 寄生式继承，即创建一个仅用于封装继承过程的函数，该函数内部以某种方法来增强对象，最后再像真的对它做了所有操作之后返回对象。
-```
+```js
 function createAnother(original){
   var clone = Object.create(original)  // 调用 Object.create 函数创建一个对象
   clone.sayHi = function() {  // 以某种方法来增强对象
@@ -167,7 +167,7 @@ var person = {
 ```
 ### 寄生式组合继承
 结合借用构造函数**传递参数**和寄生模式实现继承。
-```
+```js
 function inheritPrototype(subType, superType){
   var prototype = Object.create(superType.prototype) // 创建对象，创建父类原型的一个副本
   prototype.constructor = subType                    // 增强对象，弥补因重写原型而失去的默认的constructor 属性
@@ -179,10 +179,10 @@ function SuperType(name){
   this.name = name
   this.colors = ['red', 'blue', 'green']
 }
+
 SuperType.prototype.sayName = function(){
   alert(this.name)
 }
-
 
 function SubType(name, age){
   SuperType.call(this, name)    // 借用构造函数传递增强子类实例属性（支持传参和避免篡改）

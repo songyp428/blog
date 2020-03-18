@@ -5,7 +5,7 @@
 
 #### 构造函数
 构造函数: 使用 new 调用生成实例的函数。可以使用构造函数创建对象。
-```
+```js
 function Idol(name) {
     this.name = name
 }
@@ -15,7 +15,7 @@ var lee = new Idol('lee')
 
 #### 原型
 每一个函数都有 `prototype` 属性，函数的 `prototype` 指向一个对象。这个对象就是调用该构造函数创建的实例的原型。
-```
+```js
 function Idol(name) {
     this.name = name
 }
@@ -35,7 +35,7 @@ var vim = new Idol('vim')
 
 ####  `__proto__`
 每一个 JavaScript 对象（null 除外）都具有一个属性 `__proto__`, 这个属性指向对象的原型。
-```
+```js
 function Idol(name) {
     this.name = name
 }
@@ -47,7 +47,7 @@ console.log(lee.__proto__  === Idol.prototype) // true
 
 ####  `constructor`
 原型指向实例对象的属性，其实也不必需要。原型都有一个属性 `constructor` 指向关联的构造函数。
-```
+```js
 function Idol(name) {
     this.name = name
 }
@@ -57,11 +57,11 @@ console.log(Idol  === Idol.prototype.constructor) // true
 那么这样子我们就可以得到了构造函数、原型和实例对象之间的关系。  
 通过上面的分析，我们可以得出三者的关系如下图：  
 ![Aaron Swartz](https://raw.githubusercontent.com/songyp428/photo/master/ret/prototype1.png)
- 
+
 #### 实例与原型
 我们着重来分析一下实例和原型的关系，实例是从原型上“继承”属性，那么怎么继承呢？
 先来看一下例子吧。
-```
+```js
 function Idol(name) {
     this.name = name
 }
@@ -92,7 +92,7 @@ console.log(lee.type)  // 'idol'
 
 #### 原型链
 Object.prototype 的 `__prpro__` 指向 null。Object.prototype 是浏览器底层根据 ECMAScript 规范创造的一个对象。
-```
+```js
 console.log(Object.prototype.__proto__ === null) // true
 ```
 null 是表示缺少的标识，指示变量未指向任何对象。也就是说 Object.prototype 没有原型。  

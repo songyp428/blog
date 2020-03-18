@@ -8,13 +8,13 @@ new 关键字会进行如下的操作：
 3. 将步骤1创建的对象作为 this 的上下文
 4. 如果该函数没有返回对象，把 this 返回
 
-```
+```js
 // 模拟 new 关键字
 function Idol(age){
 	var 临时对象 = {}
     临时对象.__proto__ = Idol.原型
     临时对象.age = age
-  
+
     return 临时对象
 }
 ```
