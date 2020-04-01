@@ -46,6 +46,12 @@ module.exports = {
           children: [
             '/fe/css/图片移入移除效果实现.md'
           ]
+        },
+        {
+          title: '工具',
+          children: [
+            '/fe/工具/使用n管理node版本.md'
+          ]
         }
       ],
       '/eassy/': [
