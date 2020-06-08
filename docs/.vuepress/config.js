@@ -37,7 +37,8 @@ module.exports = {
             '/fe/js/arrayDeduplication.md',
             '/fe/js/prototype.md',
             '/fe/js/inheritance.md',
-            '/fe/js/发现alert的好用之处.md'
+            '/fe/js/发现alert的好用之处.md',
+            '/fe/js/数组扁平化处理.md'
             // '/fe/js/newOperator.md',
           ]
         },
