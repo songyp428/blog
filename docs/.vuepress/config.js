@@ -45,6 +45,7 @@ module.exports = {
         {
           title: 'CSS',
           children: [
+            '/fe/css/省略号样式.md',
             '/fe/css/图片移入移除效果实现.md'
           ]
         },
@@ -66,7 +67,6 @@ module.exports = {
         {
           title: '胡思乱想',
           children: [
-            '/eassy/think/魔道祖师.md'
           ]
         }
       ]
