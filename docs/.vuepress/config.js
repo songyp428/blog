@@ -12,8 +12,7 @@ module.exports = {
   themeConfig: {
     nav:[ // 导航栏配置
       {text: '算法', link: '/algorithm/'},
-      {text: '前端', link: '/fe/'},
-      {text: '生活随笔', link: '/eassy/'}
+      {text: '前端', link: '/fe/'}
     ],
     sidebar: {  // 侧边栏配置
       '/algorithm/': [
@@ -53,20 +52,6 @@ module.exports = {
           title: '工具',
           children: [
             '/fe/工具/使用n管理node版本.md'
-          ]
-        }
-      ],
-      '/eassy/': [
-        '/eassy/',
-        {
-          title: '美食',
-          children: [
-            // '/eassy/work/makechickenfeet.md',
-          ]
-        },
-        {
-          title: '胡思乱想',
-          children: [
           ]
         }
       ]
